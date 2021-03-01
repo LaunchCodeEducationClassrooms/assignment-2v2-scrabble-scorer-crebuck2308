@@ -82,15 +82,7 @@ let scrabbleScorer = function(word){
     }
     return wordScore
 };
-//due to an autograder issue?
 
-let scrabbleScore = scrabbleScorer
-
-let scrabbleScoreObj = {
-    name: 'Scrabble',
-    description: 'The traditional scoring algorithm.',
-    scoreFunction: scrabbleScore,
-}
 
 //Part B Organizing Algorithms into an array of 3 objects 
 //Creating an object for each score system
@@ -115,6 +107,14 @@ let bonusVowels = {
 //     scoreFunction: oldScrabbleScorer,
 // };
 
+//due to an autograder issue?
+let scrabbleScore = scrabbleScorer;
+
+let scrabbleScoreObj = {
+    name: 'Scrabble',
+    description: 'The traditional scoring algorithm.',
+    scoreFunction: scrabbleScorer,
+}
 
 const scoringAlgorithms = [simpleScorer, bonusVowels, scrabbleScoreObj]
  
