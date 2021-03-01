@@ -83,11 +83,11 @@ let scrabbleScore = function(word){
     return wordScore
 };
 
-let scrabbleScorer = {
-    name: 'Scrabble',
-    description: 'The traditional scoring algorithm.',
-    scoreFunction: scrabbleScore,
-}
+// let scrabbleScorer = {
+//     name: 'Scrabble',
+//     description: 'The traditional scoring algorithm.',
+//     scoreFunction: scrabbleScore,
+// }
 
 //Part B Organizing Algorithms into an array of 3 objects 
 //Creating an object for each score system
@@ -123,12 +123,12 @@ const scoringAlgorithms = [
     name: 'Bonus Vowels',
     description: 'Vowels are worth 3 pts, consonants are 1 pt.',
     scoreFunction: vowelBonusScore,
-    });
-    {
+    }),
+    ({
     name: 'Scrabble',
     description: 'The traditional scoring algorithm.',
-    scoreFunction: oldScrabbleScorer,
-    };
+    scoreFunction: scrabbleScore,
+});
 ];
 
 
