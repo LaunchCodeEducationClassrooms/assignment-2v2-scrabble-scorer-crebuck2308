@@ -90,14 +90,14 @@ let scrabbleScorer = function(word){
 let simpleScorerObject = {
     name: 'Simple Score',
     description: 'Each letter is worth 1 point.',
-    scoreFunction: simpleScore
+    scoringFunction: simpleScore
 };
 
 
 let bonusVowelsObject = {
     name: 'Bonus Vowels',
     description: 'Vowels are worth 3 pts, consonants are 1 pt.',
-    scoreFunction: vowelBonusScore
+    scoringFunction: vowelBonusScore
 };
 
 
@@ -113,7 +113,7 @@ let scrabbleScore = scrabbleScorer;
 let scrabbleScoreObject = {
     name: 'Scrabble',
     description: 'The traditional scoring algorithm.',
-    scoreFunction: scrabbleScorer
+    scoringFunction: scrabbleScorer
 };
 
 const scoringAlgorithms = [simpleScorerObject, bonusVowelsObject, scrabbleScoreObject];
