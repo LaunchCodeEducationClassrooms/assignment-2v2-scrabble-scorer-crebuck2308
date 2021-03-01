@@ -68,7 +68,7 @@ let vowelBonusScore = function(word){
     }return vowelScore
 };
 
-let scrabbleScore = function(word){
+let scrabbleScorer = function(word){
     word = word.toLowerCase()
     let wordScore = 0
     let letterPoint = 0
@@ -82,28 +82,31 @@ let scrabbleScore = function(word){
     }
     return wordScore
 };
+//due to an autograder issue?
 
-// let scrabbleScorer = {
-//     name: 'Scrabble',
-//     description: 'The traditional scoring algorithm.',
-//     scoreFunction: scrabbleScore,
-// }
+let scrabbleScore = scrabbleScorer
+
+let scrabbleScoreObj = {
+    name: 'Scrabble',
+    description: 'The traditional scoring algorithm.',
+    scoreFunction: scrabbleScore,
+}
 
 //Part B Organizing Algorithms into an array of 3 objects 
 //Creating an object for each score system
 //then placing into scoringAlgorithms array
-// let simpleScorer = {
-//     name: 'Simple Score',
-//     description: 'Each letter is worth 1 point.',
-//     scoreFunction: simpleScore,
-// };
+let simpleScorer = {
+    name: 'Simple Score',
+    description: 'Each letter is worth 1 point.',
+    scoreFunction: simpleScore,
+};
 
 
-// let bonusVowels = {
-//     name: 'Bonus Vowels',
-//     description: 'Vowels are worth 3 pts, consonants are 1 pt.',
-//     scoreFunction: vowelBonusScore,
-// };
+let bonusVowels = {
+    name: 'Bonus Vowels',
+    description: 'Vowels are worth 3 pts, consonants are 1 pt.',
+    scoreFunction: vowelBonusScore,
+};
 
 
 // let scrabble = {
@@ -113,20 +116,8 @@ let scrabbleScore = function(word){
 // };
 
 
-const scoringAlgorithms = [
-    Object ({
-    name: 'Simple Score',
-    description: 'Each letter is worth 1 point.',
-    scoreFunction: simpleScore}), 
-    Object ({
-    name: 'Bonus Vowels',
-    description: 'Vowels are worth 3 pts, consonants are 1 pt.',
-    scoreFunction: vowelBonusScore}),
-    Object ({
-    name: 'Scrabble',
-    description: 'The traditional scoring algorithm.',
-    scoreFunction: scrabbleScore})
-];
+const scoringAlgorithms = [simpleScorer, bonusVowels, scrabbleScoreObj]
+ 
 
 
 //Finish writing scorerPrompt in order for user to select which scoring alg. to use.
