@@ -92,28 +92,44 @@ let scrabbleScorer = {
 //Part B Organizing Algorithms into an array of 3 objects 
 //Creating an object for each score system
 //then placing into scoringAlgorithms array
-let simpleScorer = {
+// let simpleScorer = {
+//     name: 'Simple Score',
+//     description: 'Each letter is worth 1 point.',
+//     scoreFunction: simpleScore,
+// };
+
+
+// let bonusVowels = {
+//     name: 'Bonus Vowels',
+//     description: 'Vowels are worth 3 pts, consonants are 1 pt.',
+//     scoreFunction: vowelBonusScore,
+// };
+
+
+// let scrabble = {
+//     name: 'Scrabble',
+//     description: 'The traditional scoring algorithm.',
+//     scoreFunction: oldScrabbleScorer,
+// };
+
+
+const scoringAlgorithms = [
+    ({
     name: 'Simple Score',
     description: 'Each letter is worth 1 point.',
     scoreFunction: simpleScore,
-};
-
-
-let bonusVowels = {
+    }), 
+    ({
     name: 'Bonus Vowels',
     description: 'Vowels are worth 3 pts, consonants are 1 pt.',
     scoreFunction: vowelBonusScore,
-};
-
-
-let scrabble = {
+    });
+    {
     name: 'Scrabble',
     description: 'The traditional scoring algorithm.',
     scoreFunction: oldScrabbleScorer,
-};
-
-
-const scoringAlgorithms = [simpleScorer, bonusVowels, scrabbleScorer];
+    };
+];
 
 
 //Finish writing scorerPrompt in order for user to select which scoring alg. to use.
