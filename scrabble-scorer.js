@@ -87,17 +87,17 @@ let scrabbleScorer = function(word){
 //Part B Organizing Algorithms into an array of 3 objects 
 //Creating an object for each score system
 //then placing into scoringAlgorithms array
-let simpleScorer = {
+let simpleScorerObject = {
     name: 'Simple Score',
     description: 'Each letter is worth 1 point.',
-    scoreFunction: simpleScore,
+    scoreFunction: simpleScore
 };
 
 
-let bonusVowels = {
+let bonusVowelsObject = {
     name: 'Bonus Vowels',
     description: 'Vowels are worth 3 pts, consonants are 1 pt.',
-    scoreFunction: vowelBonusScore,
+    scoreFunction: vowelBonusScore
 };
 
 
@@ -110,13 +110,13 @@ let bonusVowels = {
 //due to an autograder issue?
 let scrabbleScore = scrabbleScorer;
 
-let scrabbleScoreObj = {
+let scrabbleScoreObject = {
     name: 'Scrabble',
     description: 'The traditional scoring algorithm.',
-    scoreFunction: scrabbleScorer,
-}
+    scoreFunction: scrabbleScorer
+};
 
-const scoringAlgorithms = [simpleScorer, bonusVowels, scrabbleScoreObj]
+const scoringAlgorithms = [simpleScorerObject, bonusVowelsObject, scrabbleScoreObject];
  
 
 
